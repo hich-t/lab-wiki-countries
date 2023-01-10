@@ -9,14 +9,18 @@ const Router = () => {
 return(
 <>
 <NavBar />
+
+<div className="cont">
+
 <CountriesList  />
 
 <Routes>
+<Route path="/:countryID" element={<CountryDetails/>} /> 
 <Route path="/" element={<App />} /> 
 
-<Route path="/:countryID" element={<CountryDetails/>} /> 
 
 </Routes>
+</div>
 
 </>
 )
