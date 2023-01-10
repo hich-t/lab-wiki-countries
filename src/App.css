@@ -1,38 +1,111 @@
 .App {
-  text-align: center;
+
+display: flex;
+flex-direction: row;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.countryList {
+
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 300px;
+border-right: 1px solid black;
+word-wrap: break-word;
+margin: 25px;
+font-family: Arial, Helvetica, sans-serif;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list {
+
+  font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.inactive{
+
+  color: black;
+
+}
+
+
+
+.active {
+
+  color: black;
+  text-decoration: none;
+
+}
+
+.countrytable {
+
+margin: 30px;
+width: 600px;
+
+}
+
+.details{
+
+display:block;
+float: right
+
+}
+
+
+.countrytable thead{
+
+  font-size: 30px;
+  border-bottom: 2px solid black;
+
+}
+
+.countrytable tr {
+
+padding: 10px;
+border-bottom: 1px solid black;
+font-size: 20px;
+}
+
+.countrytable img {
+
+  width: 50px;
+}
+
+.countrytable td{
+
+padding: 20px 0;
+
+}
+
+.Navbar{
+
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+margin: 20px;
+padding: 15px;
+background-color: rgb(212, 101, 4);
+border-radius: 15px;
+box-shadow: 1px 1px 20px black;
+
 }
 
-.App-link {
-  color: #61dafb;
+.Navbar a {
+
+  font-size: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Navbar h1{
+
+  margin-right: 50px;
 }
