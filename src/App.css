@@ -9,10 +9,8 @@ flex-direction: row;
 
 .countryList {
 
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-width: 300px;
+
+width: 400px;
 border-right: 1px solid black;
 word-wrap: break-word;
 margin: 25px;
@@ -43,13 +41,14 @@ font-family: Arial, Helvetica, sans-serif;
 .cont{
 
 display: flex;
-
+justify-content: flex-start;
 }
 
 .countrytable {
 
 margin: 30px;
-width: 600px;
+width: 400px;
+text-align: left;
 
 }
 
@@ -63,8 +62,19 @@ float: right
 
 .countrytable thead{
 
-  font-size: 30px;
   border-bottom: 2px solid black;
+
+}
+
+.titrepays{
+
+font-size: 35px;
+
+}
+
+.contenupays {
+
+text-align: right;
 
 }
 

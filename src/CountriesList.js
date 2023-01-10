@@ -1,15 +1,35 @@
 import countries from './countries.json';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import axios from "axios"
+
+
 const CountriesList = () => {
-  const [country, setCountry] = useState(countries);
+
+const [data, setData] = useState([])
+
+const fetchData = async () => {
+
+try {
+    const callData = await axios.get('https://ih-countries-api.herokuapp.com/countries')
+    setData(callData.data)
+
+}
+catch(err) {console.log(err)}
+}
+
+useEffect(() => {
+
+    fetchData()
+
+}, []
+)
 
 
   return (
     <div className="countryList">
 
-      {country.map((e, i) => (
+      {data.map((e, i) => (
         <NavLink className={({ isActive }) => (isActive ? "active" : "inactive")} 
         to={e.alpha3Code}
            state={{e}}>
@@ -17,7 +37,6 @@ const CountriesList = () => {
         </NavLink>
       ))}
 
-      <Outlet />
 
     </div>
   );

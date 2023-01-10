@@ -7,7 +7,6 @@ function App() {
 
 // const [data, setData] = useEffect([])
 
-console.log(countries)
 
 
 
