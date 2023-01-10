@@ -12,7 +12,9 @@ const fetchData = async () => {
 
 try {
     const callData = await axios.get('https://ih-countries-api.herokuapp.com/countries')
-    setData(callData.data)
+    setData(callData.data.reverse())
+
+    
 
 }
 catch(err) {console.log(err)}
@@ -26,10 +28,16 @@ useEffect(() => {
 )
 
 
+   
+  
+
+
   return (
     <div className="countryList">
 
-      {data.map((e, i) => (
+
+      {
+        data.map((e, i) => (
         <NavLink className={({ isActive }) => (isActive ? "active" : "inactive")} 
         to={e.alpha3Code}
            state={{e}}>
